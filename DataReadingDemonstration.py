@@ -14,20 +14,18 @@ def WritetoFile(fileNameWrite):
 
     for _ in range(numberData): 
 
-        LotteryLettering = ["A", "B", "C", "D", "E", "F"]
-
-        Shufflingletterorder = random.sample(LotteryLettering, 1)
+        LotteryLettering = random.choice["A", "B", "C", "D", "E", "F"]
 
         aRandomNumber = random.randint(1, 10)
 
-        largeDataSet.append(aRandomNumber)
+        largeDataSet.append(LotteryLettering + aRandomNumber)
     
     with open(fileNameWrite, 'w') as file:
         file.write("The Lottery Numbers are shown as the following:")
         for datapoint in largeDataSet:
-            file.write(str(Shufflingletterorder) + str(datapoint))
-            if _ == NotImplemented :
-                break
+            file.write(str(datapoint))
+            if datapoint == NotImplemented :
+                return False
             else :
                 file.write(",")
 
